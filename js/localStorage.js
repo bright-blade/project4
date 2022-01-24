@@ -54,7 +54,9 @@ function checkLocalBtn(){
         save_btn_ar = JSON.parse(localStorage["customer-btns"]);
         for (const i in save_btn_ar) {
             if(save_btn_ar[i].checked){
-                document.querySelector("#"+save_btn_ar[i].id).click()
+                if(document.querySelector("#"+save_btn_ar[i].id)){
+                    document.querySelector("#"+save_btn_ar[i].id).click();
+                }
             }
         }
     }
