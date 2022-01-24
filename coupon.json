@@ -1,0 +1,22 @@
+[
+    {
+        "code": "BF5555",
+        "per": "card",
+        "amount": 5
+    },
+    {
+        "code": "BF1111",
+        "per": "card",
+        "amount": 10
+    },
+    {
+        "code": "OR2222",
+        "per": "order",
+        "amount": 5
+    },
+    {
+        "code": "OR1111",
+        "per": "order",
+        "amount": 10
+    }
+]

@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDevProject3th</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/try.js"></script>
+    <script src="js/callAjax.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/correctmail.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/coupon.js"></script>
+    <script src="js/localStorage.js"></script>
+</head>
+
+<body>
+    <header class="col-12">
+        <div
+            class="d-non d-flex d-md-block d-lg-flex container-fluid container-lg justify-content-between align-items-center">
+            <i class="fa fa-bars fa-2x d-lg-none pointer" aria-hidden="true" onclick="menu()"></i>
+            <img class="my-2 me-lg-5" src="images/amex logo.png" alt="amex logo" height="48">
+            <nav id="id_nav"
+                class="d-none d-lg-flex justify-content-between align-items-center flex-grow-1 text-uppercase">
+                <a href="#">why amex?</a>
+                <a href="#">a card for all</a>
+                <a href="#">reload your card</a>
+                <a href="#">our offers</a>
+                <a href="#">faq</a>
+            </nav>
+            <i class="fa fa-ellipsis-v fa-2x d-lg-none pointer" aria-hidden="true"></i>
+        </div>
+    </header>
+    <main>
+        <section id="p-0" class="page_0 d-non">
+            <div class="choose_your_card container  ">
+                <img src="images/select_card_intro.jpg" width="100%" alt="select_card_intro">
+                <h1 class="text-center ">Choose Your <strong> Card</strong>
+                    <p> &#8212;</p>
+                </h1>
+            </div>
+            <div class="container d-lg-flex">
+                <div class="col-9 col-lg mx-auto my-5">
+                    <a href="#" onclick="next(),basic()" class="pointer"><img
+                            src="images/platinum-card-metal_480x304.png" width="100%" alt="platinum card metal"></a>
+                    <h2 class="text-center py-2">Basic&#10095;</h2>
+                    <ul>
+                        <li>No documents to provide</li>
+                        <li>Withdrawal up to €100 per day</li>
+                        <li>Embossed and Customizable Card</li>
+                        <li>IBAN/RIB included</li>
+                    </ul>
+                </div>
+                <div class="col-9 col-lg px-lg-5 mx-auto my-5">
+                    <a href="#" onclick="next(),Classic()" class="pointer"><img src="images/amex gold.jpg" width="100%"
+                            alt="amex gold card"></a>
+                    <h2 class="text-center py-2 ">Classic&#10095;</h2>
+                    <ul>
+                        <li>Individual or society</li>
+                        <li>Access to Special Offers</li>
+                        <li>Balance up to €10.000</li>
+                        <li>Reloading up to €15.000/month</li>
+                    </ul>
+                </div>
+                <div class="col-9 col-lg mx-auto my-5">
+                    <a href="#" onclick="next(),vip()" class="pointer"><img src="images/amex blue.jpg" width="100%"
+                            alt="amex metal blue card"></a>
+                    <h2 class="text-center py-2">VIP &#10095;</h2>
+                    <ul>
+                        <li>Individual or society</li>
+                        <li>Access to Special Offers</li>
+                        <li>Balance up to €25.000</li>
+                        <li>Reloading up to €50.000/month</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <p class="text-center col-10 mx-auto mb-5">Note: Depending on your country of residence, local recharge
+                    limits may apply to your card.</p>
+            </div>
+        </section>
+
+        <section id="id_1_2" class="d-none">
+            <div class="d-none progression-bar progression-bar_1 d-flex align-items-center">
+                <ul class="d-flex col-12 justify-content-around p-0 m-0 text-uppercase">
+                    <li class="text-white"> <span class="d-none d-lg-block">1. amex card </span><span
+                            class="d-lg-none"><i class="fi-rr-user"></i></span></li>
+                    <li> <span class="d-none d-lg-block">2. information </span><span class="d-lg-none"><i
+                                class="fi-rr-marker"></i></span></li>
+                    <li> <span class="d-none d-lg-block">3. payment method </span><span class="d-lg-none"><i
+                                class="fi-rr-lock"></i></span></li>
+                </ul>
+            </div>
+            <div class="d-non progression-bar progression-bar_2 d-flex align-items-center text-uppercase">
+                <ul class="d-flex col-12 justify-content-around p-0 m-0">
+                    <li class="text-white"> <span class="d-none d-lg-block">1. amex card </span><span
+                            class="d-lg-none"><i class="fi-rr-user"></i></span></li>
+                    <li class="text-white"> <span class="d-none d-lg-block">2. information </span><span
+                            class="d-lg-none"><i class="fi-rr-marker"></i></span></li>
+                    <li> <span class="d-none d-lg-block">3. payment method </span><span class="d-lg-none"><i
+                                class="fi-rr-lock"></i></span></li>
+                </ul>
+            </div>
+            <div class="wrapper d-md-flex col-md-10 mx-auto ">
+                <aside class="d-flex justify-content-md-end col-md-4 position-relative ">
+                    <div class="d-flex justify-content-center mx-auto flex-column sticky-md-top ">
+                        <div class="d-none mx-auto d-md-block text-uppercase position-relative">
+                            <img src="images/chime card for Project 3.png" width="100%" alt="platinum card metal">
+                            <p id="id_date"></p>
+                            <div id="id_name_on_card">
+                                <span id="id_f_name_card"></span>
+                                <span id="id_l_name_card"></span>
+                                <p id="id_cstm_card"></p>
+                            </div>
+
+
+                        </div>
+                        <img class="mx-auto" src="images/badge_price.png" width="80%" alt="badge price">
+
+                    </div>
+                </aside>
+                <section class="col-md-8 ms-md-3">
+                    <h1 id="id_per_dtl" class="text-uppercase text-center text-md-start mt-4">
+                        personal details
+                        <p>&#8212;</p>
+                    </h1>
+                    <h1 id="id_my_dtl" class="text-uppercase text-center text-md-start mt-4 d-none">
+                        my details
+                        <p>&#8212;</p>
+                    </h1>
+                    <form action="get" class="col-8 col-md-12 mx-auto">
+                        <div id="p-1" class="part_1 d-none">
+                            <div>
+                                <span class="text-capitalize me-3">title</span>
+                                <label class="text-capitalize me-3" for="id_Mr"><input type="radio" name="title"
+                                        id="id_Mr" class="prsn" checked> mr</label>
+                                <label class="text-capitalize me-3" for="id_Mis"><input type="radio" name="title"
+                                        id="id_Mis" class="prsn" > mis</label>
+                                <label class="text-capitalize me-3" for="id_corporate"><input type="radio" name="title"
+                                        id="id_corporate"> corporate</label>
+                                <label class="text-capitalize me-3" for="id_association"><input type="radio"
+                                        name="title" id="id_association"> association</label>
+                            </div>
+                            <div id="id_dtl_of_prsn">
+                                <div class="d-non container p-0 d-md-flex flex-wrap">
+                                    <label for="id_first_name" class="mt-3 col-12 col-md-6 pe-md-2 order-0">
+                                        <p id="id_p_first" class="mb-0 ">First Name</p>
+                                        <input type="text" id="id_first_name" class="col-12 jx0"
+                                            oninput="longF(),changeFN(),validaFirst(),addToLocalStorage(this)" onblur="validaFirst()">
+                                        <div id="id_first_invalid" class="invalid-feedback d-none">
+                                            this field is required.
+                                        </div>
+                                    </label>
+
+                                    <label for="id_last_name" class="mt-3 col-12 col-md-6 ps-md-2 order-1">
+                                        <p id="id_p_last" class="mb-0">Last Name</p>
+                                        <input type="text" id="id_last_name" class="col-12 jx1"
+                                            oninput="longF(),changeLN(),validaLast(),addToLocalStorage(this)" onblur="validaLast()">
+                                        <div id="id_last_invalid" class="invalid-feedback d-none">
+                                            this field is required.
+                                        </div>
+                                    </label>
+
+                                    <label for="id_custom" class="mt-3 col-12 col-md-6 pe-md-2 order-2">
+                                        <p class="mb-0">Custom Field</p>
+                                        <input type="text" id="id_custom" class="col-12 jx2" oninput="changeCos(),addToLocalStorage(this)">
+                                    </label>
+
+
+                                    <div class="mt-3 col-12 col-md-6 ps-md-2 order-3">
+                                        <p class="mb-1">IBAN UK</p>
+                                        <label for="id_uk_1">
+                                            <input id="id_uk_1" class="class_uk" type="radio" name="flag" onchange="getByName(this)" onclick="ibanSummary(this)" checked>
+                                            <span class="uk_span pointer"></span>
+                                        </label>
+                                        <label for="id_fr_1">
+                                            <input id="id_fr_1" class="class_fr" type="radio" name="flag" onchange="getByName(this)" onclick="ibanSummary(this)">
+                                            <span class="french_span pointer"></span>
+                                        </label>
+                                        <wrapper class="col-12">
+                                            <span id="id_add_card" onclick="addNewCard(),addedCardBtnLocalStorageFlag()" class="pointer btn btn-primary float-end">
+                                                Add Card
+                                            </span>
+                                        </wrapper>
+                                    </div>
+                                    <label id="id_label_custom_2" for="id_custom2"
+                                        class="d-none mt-3 col-12 col-md-6 pe-md-2 order-4">
+                                        <p class="mb-0">Custom Field</p>
+                                        <input type="text" id="id_custom2" class="col-12">
+                                    </label>
+
+                                    <div id="id_added" class="d-none order-4 pointer col-md-6 ps-md-2 mb-3">
+                                        <p class="mt-3 mb-1">IBAN UK</p>
+
+                                        <label for="id_uk_2">
+                                            <input id="id_uk_2" class="class_uk" type="radio" name="flag2" onclick="ibanSummary(this)" onchange="getByName(this)" checked>
+                                            <span class="uk_span pointer"></span>
+                                        </label>
+                                        <label for="id_french2">
+                                            <input id="id_french2" class="class_fr" type="radio" name="flag2" onclick="ibanSummary(this)" onchange="getByName(this)"><span
+                                                class="text-uppercase pointer french_span "></span>
+                                        </label>
+                                        <wrapper>
+                                            <span id="id_delete" onclick="deleteNewCard(),addedCardBtnLocalStorageFlag()"
+                                                class="pointer btn btn-danger text-uppercase  float-end d-md-">Delete
+                                                Card
+                                            </span>
+                                        </wrapper>
+                                    </div>
+                                    <label id="id_dbo_label_1" class="col-12 col-md-6 mt-3 pe-md-2 order-4"
+                                        for="id_date_of_birdh_1">
+                                        Date Of Birth
+                                        <input id="id_date_of_birdh_1" class="d-block col-12 jx3" type="date"
+                                            oninput="validaDOB_1(this),addToLocalStorage(this)" onblur="validaDOB_1(this)">
+                                        <p class="small">(For example: 31/12/1970)</p>
+                                        <div id="id_dbo_invalid_1" class="invalid-feedback d-none">
+                                            Please enter a valid date.<br>
+                                            Must be at least 18 years old.
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="id_cprt" class="d-none">
+                                <div class="d-md-flex flex-wrap">
+                                    <label for="id_company_name" class="col-12 col-md-6 pe-md-2 mt-3">
+                                        <p id="id_p_company" class="mb-0">Company Name</p>
+                                        <input type="text" id="id_company_name" class="col-12 jx4"
+                                            oninput="longC(),changeCom(),validaCompany(),addToLocalStorage(this)" onblur="validaCompany()">
+                                        <div id="id_company_invalid" class="invalid-feedback d-none">
+                                            this field is required.
+                                        </div>
+                                    </label>
+
+                                    <label for="id_structure_name" class="col-12 col-md-6 ps-md-2 mt-3">
+                                        <p id="id_p_structure" class="mb-0">Corporate Structure</p>
+                                        <input type="text" id="id_structure_name" class="col-12 jx5"
+                                            oninput="longC(),changeStrc(),validaStructure(),addToLocalStorage(this)" onblur="validaStructure()">
+                                        <div id="id_structure_invalid" class="invalid-feedback d-none">
+                                            this field is required.
+                                        </div>
+                                    </label>
+
+                                    <label id="id_dbo_label_2" class="col-12 col-md-6 pe-md-2 mt-3"
+                                        for="id_date_of_birdh_2">
+                                        Date of birth person in charge
+                                        <input id="id_date_of_birdh_2" class="col-12 jx3" type="date"
+                                            onblur="validaDOB_2(this)" oninput="validaDOB_2(this),addToLocalStorage(this)">
+                                        <p class="small">(For example: 31/12/1970)</p>
+                                        <div id="id_dbo_invalid_2" class="invalid-feedback d-none">
+                                            Please enter a valid date.<br>
+                                            Must be at least 18 years old.
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div id="id_associ" class="d-none">
+                                <div class="">
+                                    <label for="id_association_name" class="col-12 col-md-6 pe-md-2 mt-3">
+                                        <p id="id_p_association" class="mb-0">Association Name</p>
+                                        <input type="text" maxlength="20" id="id_association_name" class="col-12 jx6"
+                                            oninput="longA(),changeAssc(),validaAssociation(),addToLocalStorage(this)"
+                                            onblur="validaAssociation()">
+                                        <div id="id_association_invalid" class="invalid-feedback d-none">
+                                            this field is required.
+                                        </div>
+                                    </label>
+
+                                    <label id="id_dbo_label_3" class="col-12 col-md-6 pe-md-2 mt-3"
+                                        for="id_date_of_birdh_3">
+                                        Date Of Birth
+                                        <input id="id_date_of_birdh_3" class="d-block col-12 jx3" type="date"
+                                            onblur="validaDOB_3(this),addToLocalStorage(this)" oninput="validaDOB_3(this)">
+                                        <p class="small">(For example: 31/12/1970)</p>
+                                        <div id="id_dbo_invalid_3" class="invalid-feedback d-none">
+                                            Please enter a valid date.<br>
+                                            Must be at least 18 years old.
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="id_card_account" class="d-none">
+                                <h3 class="text-uppercase">card account parameters</h3>
+                                <div class="d-md-flex flex-wrap container p-0">
+                                    <label class="col-12 " for="">
+                                        please specify the number of cards you would like.
+                                        <div class="col-12 col-md-6 pe-md-2 mb-3">
+                                            <select  id="id_select" class="col-12 form-select"
+                                                oninput="cardCount(),countSelect(this)">
+                                                <option value="1">1 Card</option>
+                                                <option value="2">2 cards</option>
+                                                <option value="3">3 cards</option>
+                                                <option value="4">4 cards</option>
+                                                <option value="5">5 cards</option>
+                                                <option value="6">6 cards</option>
+                                            </select>
+                                        </div>
+                                    </label>
+
+                                    <input type="checkbox" name="customization" id="id_customization_check"
+                                        class="form-check-input d-md-inline" onchange="addBtnToLocalStorage(this)">
+                                    <label class=" d-md-inline" for="id_customization_check">
+                                        <span class="ms-1"> customization & IBAN selection</span>
+                                    </label>
+
+                                    <div id="id_indicate" class="mt-3 align-items-end container col-12 p-0">
+                                        <div class="me-3 me-md-0 col-8  col-md-6 pe-md-2">
+                                            <label for="">Indicate here the desired customization</label>
+                                            <input id="id_here_1" class="jx2" type="text" oninput="changecoscom(),addToLocalStorage(this)">
+                                        </div>
+
+                                        <div id="id_card_label" class="col-4 col-md-6 ps-md-2">
+                                            <p class="mb-0">IBAN UK</p>
+                                            <label for="id_uk-1">
+                                                <input id="id_uk-1" class="class_uk" type="radio" name="flag" onchange="getByName(this)">
+                                                <span class="uk_span pointer"></span>
+                                            </label>
+                                            <label for="id_french-1">
+                                                <input id="id_french-1" class="class_fr" type="radio" name="flag" onchange="getByName(this)">
+                                                <span class="french_span pointer"></span>
+                                            </label>
+
+                                        </div>
+                                    </div><!-- end  -->
+                                </div>
+                            </div>
+
+                            <label for="id_i_do" class="d-flex align-items-end mt-3">
+                                <p class=""> I confirm that I have read and accepted the Legal Notice, General Terms and
+                                    Conditions and Privacy Policy. </p>
+                                <input id="id_i_do" type="checkbox" name="i-do" onchange="addBtnToLocalStorage(this)"><span class="noMargin pointer"></span>
+                            </label>
+                        </div>
+
+                        <div id="p-2" class="d-none part_2 container p-0">
+                            <div class="d-md-flex flex-md-wrap align-items-md-start">
+                                <label id="id_p_email" for="id_email_name" class="col-12">Email
+                                    <input id="id_email_name" class="jx7" name="email" type="email"
+                                        oninput="validaEmail(),addToLocalStorage(this)" onblur="validaEmail(),correctedEmail()">
+                                    <span class="small"> (To connect to your Customer Area) </span>
+                                    <div id="id_email_invalid" class="invalid-feedback d-none">
+                                        this field is required.
+                                    </div>
+                                    <div id="id_email_invalid_cor" class="invalid-feedback d-none">
+                                        Please enter a valid email address.
+                                    </div>
+                                </label>
+                                <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Email address suggestions
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input id="id_suggest" name="corrected" type="radio" onchange="getByName(this)"><label
+                                                    id="id_suggest_label" class="ms-1" for="id_suggest"></label>
+                                                <br>
+                                                <input id="id_wrong" name="corrected" type="radio" onchange="getByName(this)"><label
+                                                    id="id_wrong_label" class="ms-1" for="id_wrong"></label>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-warning text-white"
+                                                    data-bs-dismiss="modal" onclick="changeEmail()">OK</button>
+
+                                                <button type="button" class="btn btn-secondary">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-3 col-md-6 pe-md-2">
+                                    <label for="id_area" class="col-12">
+                                        Area Code
+                                        <select name="area_code" id="id_area" class="col-12" onchange="addToLocalStorage(this)">
+                                            <option value="uk">+44 (United Kingdom)</option>
+                                            <option value="fra">+33 (France)</option>
+                                            <option value="isra">+972 (Israel)</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <label id="id_p_phone" for="id_phone_name" class="mt-3 col-12 col-md-6 ps-md-2">
+                                    Phone Number
+                                    <input id="id_phone_name" class="jx8" type="text" maxlength="11"
+                                        oninput="validaPhone(),addToLocalStorage(this)" onblur="validaPhone()">
+                                    <span class="small"> (To receive your PIN code) </span>
+                                    <div id="id_phone_invalid" class="invalid-feedback d-none">
+                                        Please, enter at least 2 characters.
+                                    </div>
+                                    <div id="id_phone_invalid2" class="invalid-feedback d-none">
+                                        Number only please.
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="d-md-flex flex-md-wrap">
+                                <h3 class="border-top col-12 mt-3 pt-3">RESIDENTIAL ADDRESS</h3>
+
+                                <input id="id_search" class="col-12 mt-3" type="text"
+                                    placeholder="Search for an address" oninput="addToLocalStorage(this)">
+
+                                <label id="id_p_address" for="id_address_name" class="mt-3 col-12 col-md-6 pe-md-2">
+                                    Address
+                                    <input id="id_address_name" class="jx9" type="text" maxlength="30"
+                                        oninput="validaAdress(),addToLocalStorage(this)" onblur="validaAdress()">
+                                    <div id="id_address_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+
+
+                                <label for="id_address_details" class="mt-3 col-12 col-md-6 ps-md-2">
+                                    Additional Address Details
+                                    <input id="id_address_details" type="text" maxlength="30" oninput="addToLocalStorage(this)">
+                                </label>
+
+                                <label id="id_p_city" for="id_city_name" class="mt-3 col-12 col-md-4 pe-md-2">
+                                    City
+                                    <input id="id_city_name" class="jx10" type="text" maxlength="25"
+                                        oninput="validaCity(),addToLocalStorage(this)" onblur="validaCity()">
+                                    <div id="id_city_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+
+                                <label id="id_p_zip" for="id_zip_name" class="mt-3 col-12 col-md-4 px-md-1">
+                                    Zip Code
+                                    <input id="id_zip_name" class="jx11" type="text" maxlength="15"
+                                        oninput="validaZip(),addToLocalStorage(this)" onblur="validaZip()">
+                                    <div id="id_zip_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+
+                                <label for="id_country" class="mt-3 col-12 col-md-4 ps-md-2 jx12">
+                                    Country
+                                    <select name="country" id="id_country" class="col-12" onchange="addToLocalStorage(this)">
+                                        <option value="united kingdom">United Kingdom</option>
+                                        <option value="france">France</option>
+                                        <option value="israel">Israel</option>
+                                    </select>
+                                </label>
+
+                                <div class="mt-3 pt-3 col-12 dotted">
+                                    <input type="checkbox" class="pointer" name="delivery" id="id_delivery"
+                                        onclick="if_dif()" oninput="addBtnToLocalStorage(this)">
+                                    <label for="id_delivery"> Delivery Address (if different)</label>
+                                </div>
+                                <input id="id_search2" class="col-12 mt-3 if_dif" type="text"
+                                    placeholder="Search for an address" oninput="addToLocalStorage(this)">
+
+                                <label id="id_p_address_del" class="mt-3 col-12 col-md-6 pe-md-2 if_dif"
+                                    for="id_address_del_name">
+                                    Address
+                                    <input id="id_address_del_name" type="text" maxlength="30"
+                                        oninput="validaAdressDel(),addToLocalStorage(this)" onblur="validaAdressDel()">
+                                    <div id="id_address_del_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+
+                                <label class="mt-3 col-12 col-md-6 ps-md-2 if_dif" for="id_address_details_del">
+                                    Additional Address Details
+                                    <input id="id_address_details_del" type="text" maxlength="35" oninput="addToLocalStorage(this)">
+                                </label>
+
+                                <label id="id_p_city_del" class="mt-3 col-12 col-md-4 pe-md-2 if_dif"
+                                    for="id_city_del_name">
+                                    City
+                                    <input id="id_city_del_name" type="text" maxlength="25" oninput="validaCityDel(),addToLocalStorage(this)"
+                                        onblur="validaCityDel()">
+                                    <div id="id_city_del_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+
+                                <label id="id_p_zip_del" class="mt-3 col-12 col-md-4 px-md-1 if_dif"
+                                    for="id_zip_del_name">
+                                    Zip Code
+                                    <input id="id_zip_del_name" type="text" maxlength="15" oninput="validaZipDel(),addToLocalStorage(this)"
+                                        onblur="validaZipDel()">
+                                    <div id="id_zip_del_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                    </div>
+                                </label>
+                                <label class="mt-3 col-12 col-md-4 ps-md-2 if_dif" for="id_country_del">
+                                    Country
+                                    <select name="country_del" id="id_country_del" class="col-12 if_dif" onchange="addToLocalStorage(this)">
+                                        <option value="united_kingdom">United Kingdom</option>
+                                        <option value="france">France</option>
+                                        <option value="israel">Israel</option>
+                                    </select>
+                                </label>
+
+
+
+                                <label class="mt-3 col-12 border-top pt-3" for="id_question">
+                                    Secret Question
+                                    <select name="secret" id="id_question" class="col-12 jx13" onchange="addToLocalStorage(this)">
+                                        <option value="mom">What is your mother's first name?</option>
+                                        <option value="book">What is the name of your favorite book?</option>
+                                        <option value="school">What is the name of your 1st school?</option>
+                                    </select>
+
+                                    <span class="small"> To help secure your card and your account </span>
+
+                                </label>
+                                <label id="id_p_answer" class="mt-3 col-12" for="id_answer_name">
+                                    Answer
+                                    <input id="id_answer_name" class="jx14" name="answer" type="text" maxlength="22"
+                                        oninput="validaAnswer(),addToLocalStorage(this)" onblur="validaAnswer()">
+                                    <div id="id_answer_invalid" class="invalid-feedback d-none">
+                                        This field is required.
+                                        Please enter at least 5 characters.
+                                    </div>
+                                </label>
+                                <div id="id_cards_count" class="mt-3 col-12">
+                                    <label class="col-12" for="id_deposit_1">
+                                        Card #1 First Deposit
+                                        <select name="deposit_1" id="id_deposit_1" class="col-12 jx15" onchange="selectConnectSummary(this),addToLocalStorage(this)">
+                                            <option value="0">0 &euro;</option>
+                                            <option value="10">10 &euro;</option>
+                                            <option value="20">20 &euro;</option>
+                                            <option value="30">30 &euro;</option>
+                                            <option value="100">100 &euro;</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 col-12">
+                                By clicking on VALIDATE i acknowledge that my AMEX card is a customized product and
+                                accept its immediate production from the approval of my order and, as such, expressly
+                                renounce to exercise my right to cancel my order pursuant to the provisions of article
+                                L.121-21-8 of the consumer code
+                            </p>
+
+                            <label class="d-flex justify-content-between" for="id_i_will">
+                                <p class="mt-1 mb-2"> I would like to receive exclusive offers from AMEX Card </p>
+                                <input type="checkbox" name="i_will" id="id_i_will" onchange="addBtnToLocalStorage(this)"><span class="pointer"></span>
+                            </label>
+
+                        </div>
+
+
+
+                    </form>
+                </section>
+            </div>
+        </section>
+
+
+        <section id="p-3" class="page_3 d-none">
+            <div class="progression-bar progression-bar_3 d-flex align-items-center text-uppercase">
+                <ul class="d-flex col-12 justify-content-around p-0 m-0">
+                    <li class="text-white"> <span class="d-none d-lg-block">1. amex card </span><span
+                            class="d-lg-none"><i class="fi-rr-user"></i></span></li>
+                    <li class="text-white"> <span class="d-none d-lg-block">2. information </span><span
+                            class="d-lg-none"><i class="fi-rr-marker"></i></span></li>
+                    <li class="text-white"> <span class="d-none d-lg-block">3. payment method </span><span
+                            class="d-lg-none"><i class="fi-rr-lock"></i></span></li>
+                </ul>
+            </div>
+
+            <div class=" d-md-flex flex-wrap p-0 mx-md-auto m-md-0 col-12 ">
+                <h1 class="text-uppercase text-center text-md-start d-md-none col-md-5 mb-5 mb-md-0">Payment mode<p>
+                        &#8212;</p>
+                </h1>
+                <div class="container mt-5 m-auto m-md-0 col-md-6 col-lg-5 p-md-0">
+                    <div class="d-flex container col-11 m-auto position-relative bg-gray mt-lg-5 rounded-3">
+                        <img class="position-absolute r-img" src="images/platinum-card-metal_480x304.png" width="70%"
+                            alt="">
+                        <img class="position-absolute r-img r-2" src="images/platinum-card-metal_480x304.png"
+                            width="70%" alt="">
+                        <span id="id_one_or_two" class="position-absolute "> <span>1</span></span>
+
+                        <div class="position-absolute topRight ">
+                            <div class="d-inline-block">
+                                <p class="text-uppercase m-0 ">Priority</p>
+                                <p class="text-uppercase m-0 pri">Mail</p>
+                            </div>
+                            <p class="bigT d-inline-block">T</p>
+                            <p class="small p-0 m-0 mt smallM">M 20 g</p>
+                        </div>
+
+                        <ul class="Summary list-inline">
+                            <li class="text-capitalize"> <span id="id_first_summ"> </span> <span id="id_last_summ">
+                                </span> </li>
+                            <li id="id_full_address" class="text-capitalize"></li>
+                            <li id="id_full_city" class="text-capitalize"></li>
+                            <li id="id_state" class="text-capitalize"></li>
+                        </ul>
+
+
+                    </div>
+                    <div class="bg-gray d-flex flex-column container col-11 m-auto position-relative rounded-3 mt-5">
+                        <div class="position-relative bg-bluelue rounded-3 text-white mt-4 mx-3">
+                            <span class="viList bg-warning text-white">&#10003;</span>
+                            <ul class="list-inline p-3 m-0">
+                                <li>&#10003; Card type: AMEX <span id="id_card_type_summ"></span> </li>
+                                <li>&#10003; Currency: EUR</li>
+                                <li>&#10003; IBAN: <span id="id_iban_summ"></span></li>
+                            </ul>
+                        </div>
+                        <div id="id_summary_bill" class="position-relative small bg-bluelue rounded-3 mt-4 mx-3 p-3 ps-1 text-white">
+                            <span class="bg-light text-warning position-absolute rounded-circle px-2 py-1 cart">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                            </span>
+                            <p id="id_fixed" class="m-0 ms-3">
+                                Fixed (upgrade corporate)
+                                    <span  class="float-end">
+                                        8&euro;
+                                    </span>
+                            </p>
+                            <p id="id_card_1" class="m-0 ms-3">
+                                <!-- <i class="fa fa-trash-o text-danger pointer" aria-hidden="true"></i> -->
+                                1 X card (annual fees), 
+                                <span id="id_cost_card_1" class="float-end">
+                                    29.90&euro;
+                                </span>
+                            </p>
+                            <p id="id_first_deposit_1" class="m-0 ms-3" >
+                                <i id="id_trash_1" class="fa fa-trash-o text-white pointer" aria-hidden="true"></i>
+                                First deposit
+                                <span id="id_depo_1" class="float-end">
+                                10.00&euro;
+                                </span>
+                            </p>
+                            <!-- second -->
+                            <p id="id_card_2" class="m-0">
+                                <i class="fa fa-trash-o text-danger pointer" onclick="lessOne()" aria-hidden="true"></i>
+                                1 X card (annual fees), 
+                                <span id="id_cost_card_2" class="float-end">
+                                    29.90&euro;
+                                </span>
+                            </p>
+                            <p id="id_first_deposit_2" class="m-0 ms-3 " >
+                                <i id="id_trash_2" class="fa fa-trash-o text-white pointer" onclick="zero(this)" aria-hidden="true"></i>
+                                First deposit
+                                <span id="id_depo_2" class="float-end">
+                                    10.00&euro;
+                                </span>
+                            </p>
+                        </div>
+                        <div class="mt-2 mb-5 mx-3 p-4 ">
+                            <form action="#" class="">
+                                <label for="id_coupon">
+                                    <span class="h4 text-uppercase">
+                                        coupon
+                                    </span>
+                                    <span class="small">
+                                        (optional)
+                                    </span>
+                                </label>
+                                <input id="id_coupon" class="rounded-pill form-text" type="text"
+                                    placeholder="Write the coupon here..." oninput="validCoupon(this)">
+                                <button id="id_coupon_btn" class="btn btn-primary text-white text-uppercase mt-2" type="button"   disabled onclick="addCouponToUrl()">
+                                    Validate
+                                </button>
+                            </form>
+                        </div>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div id="id_modal" class="modal-body d-flex flex-column align-items-center">
+                                                <div class="d-flex col-12 flex-column position-relative align-items-center">
+                                                    <img src="images/Project 3 - Sponsorship.png" class="col-4 mb-4" alt="present">
+                                                    <div class="btn rounded-pill btn-warning text-uppercase p-2 px-3 text-white fw-bold col-4 position-absolute bottom-0">+5&euro;</div>
+                                                </div>
+                                                <h5 class="mx-5 mt-3 text-center"><strong class="text-capitalize">ezekiel balouka </strong>Invite you to discover the <strong class="text-capitalize">amex mastercard</strong> Complete this order and you will receive 5 Eur per card</h5>
+                                                <button mastercard type="button" class="btn rounded-pill btn-warning text-uppercase p-2 px-3 text-white fw-bold my-3" data-bs-dismiss="modal">i order &#10095;</button>
+                                                <p class="small">
+                                                    This offer expire in
+                                                </p>
+                                                    <div class="d-flex gap-2">            
+                                                        <div class="position-relative ">
+                                                            <div id="id_days" class="date-card  text-warning fw-bold p-2 h1 mb-4">
+                                                                
+                                                            </div>
+                                                            <small class="col-12 text-center position-absolute bottom-0">Days</small>
+                                                        </div>
+                                                        <div class="position-relative ">
+                                                            <div id="id_hours" class="date-card  text-warning fw-bold p-2 h1 mb-4">
+                                                                
+                                                            </div>
+                                                            <small class="col-12 text-center position-absolute bottom-0">Hours</small>
+                                                        </div>
+                                                        <div class="position-relative ">
+                                                            <div id="id_minutes" class="date-card  text-warning fw-bold p-2 h1 mb-4">
+                                                                
+                                                            </div>
+                                                            <small class="col-12 text-center position-absolute bottom-0">Minutes</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!-- end modal -->
+                        <div class="bg-bluelue col-12 total ">
+                            <div class="d-flex justify-content-between px-4 m-auto py-1 h5">
+                                <span class="text-white">Total &#10095;</span>
+                                <span id="id_totalos" class="text-warning"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <h2 class="text-center mt-5">Select your payment method</h2> -->
+                <div class="contain_right mx-5 m-md-0 col-md-6 col-lg-7 border-md-start border-0">
+                    <h1
+                        class="text-uppercase text-center text-md-start d-none d-md-block order-md-2 col-md-12 ms-md-3 ">
+                        Payment mode<p>&#8212;</p>
+                    </h1>
+
+                    <div class="d-flex flex-wrap justify-content-between m-auto px-lg-3 ">
+                        <div
+                            class="d-flex flex-column box col-5 my-4 rounded-3 align-items-center justify-content-end ms-md-3 my-col-lg-4 mx-lg-0 my-lg-2 ">
+                            <div class="d-flex m-3"><img src="images/visa-card.png" width="90%" alt="visa card"
+                                    class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue ">VISA Card</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column box col-5 my-4 rounded-3 align-items-center justify-content-end me-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3"><img src="images/master-american-dinners-card.png" width="90%"
+                                    alt="visa card" class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue ">Mastercard</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column box col-5 my-4 rounded-3 align-items-center justify-content-end ms-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3"><img src="images/paypal-card.png" width="90%" alt="visa card"
+                                    class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue ">Pay Pal</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column box col-5 my-4 rounded-3 align-items-center justify-content-end me-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3"><img src="images/neosurf-coupons.png" width="90%" alt="visa card"
+                                    class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue ">Neosurf</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column box col-5 my-4 rounded-3 align-items-center justify-content-end ms-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3 "><img src="images/poste.png" width="90%" alt="visa card"
+                                    class="m-auto"></div>
+                            <div class="btn text-white h6 bg-bluelue col-10">Mandat (MVC)</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column justify-content-end box col-5 my-4 rounded-3 align-items-center me-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3 my-5 col-6"><img src="images/virement.png" width="90%"
+                                    alt="visa card" class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue ">Transfer</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                        <div
+                            class="d-flex flex-column justify-content-end box col-5 my-4 rounded-3 align-items-center ms-md-3 my-col-lg-4 mx-lg-0 my-lg-2">
+                            <div class="d-flex m-3 my-5 col-8"><img src="images/bitcoin.png" width="90%" alt="visa card"
+                                    class="m-auto"></div>
+                            <div class="btn text-white col-10 h5 bg-bluelue mt-3">Bitcoin</div>
+                            <div class="d-flex justify-content-between col-10">
+                                <p class="small">100% Secure Payment</p>
+                                <img src="images\ssl-order-card-pill.png" class="ssl" height="20px"
+                                    alt="ssl order card pill">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                        <div class="me-2 ms-md-3">
+                            <img src="images/ssl-order-card.png" width="20px" alt="ssl order card">
+                        </div>
+                        <p>Secure Payment Option - SSL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="id_btn" class="mt-0 pt-3 border-top text-uppercase mb-5 d-none">
+            <a onclick="pre()" href="#" class="btn btn-light ">
+                &#10094; Previous
+            </a>
+            <a id="id_continue" href="#" onclick="beforeNext()" class="btn btn-primary float-end ">
+                Continue &#10095;
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="d-flex flex-column flex-lg-row flex-lg-wrap justify-content-lg-center align-items-lg-center ">
+            <div
+                class="lion text-white d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-center order-md-1 col-lg-12">
+
+                <container
+                    class="col-10 m-lg-0 col-lg-5 mx-auto d-flex justify-content-center align-items-center justify-content-lg-end mt-4 ">
+                    <img src="images/lion.png" width="60" alt="lion">
+                    <p class="m-0 h3 "> 746,016 <span class="text-color lh-1 fw-bolder bg-white"> subscribers trust
+                            us.</span> </p>
+                </container>
+                <p class="h3 text-center mb-4 text-lg-start col-lg-5 m-lg-0 ms-lg-2"> At your service for <span
+                        class="fw-bold fo-num h2">9</span> YEARS <span class="fo-and"
+                        style="font-family: Lucida Handwriting; ">and </span> <span class="fw-bold fo-num h2">
+                        332</span> Days</p>
+
+            </div>
+            <div class="text-center text-lg-start mt-4 col-10 mx-auto order-md-3 col-lg-3 m-lg-0 mt-lg-4">
+                <h2 class="fw-bold">AMEX at your service</h2>
+                <p class="h5">Customer Service in English at your service by <strong> phone</strong> from Monday to <br>
+                    <span class="bold">
+                        Saturday from 9h to 18h30</span>
+                </p>
+            </div>
+            <div class=" m-auto order-md-2 col-lg-3 m-lg-0">
+                <div class="">
+                    <img src="images/trust-us.png" width="100%" alt="trust us image">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
