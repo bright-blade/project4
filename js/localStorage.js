@@ -31,6 +31,7 @@ function checkLocal(){
             }
         }
     }
+
 }
 
 // ---local storage for all btns---//
@@ -104,6 +105,9 @@ function checkLocalTitle(){
     if(localStorage["title"]){
         let element = document.querySelector('#'+localStorage.title);
         element.click();
+    }else{
+        document.querySelector("#id_Mr").click();
+        deleteNewCard();
     }
 }
 

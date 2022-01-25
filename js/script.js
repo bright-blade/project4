@@ -5,7 +5,6 @@ window.onload =  function () {
                 onMrMis();
                 titleLocalStorage(this);
         })
-        
         document.querySelector("#id_Mis").addEventListener("click",function(){
                 onMrMis();
                 titleLocalStorage(this);
