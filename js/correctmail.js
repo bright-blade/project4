@@ -36,7 +36,7 @@ function correctedEmail(){
 }
 function changeEmail(){
     let y = document.getElementById("id_suggest").checked;
-    if( document.querySelector("#id_suggest").checked){
+    if(y){
         let inputEmail = document.querySelector("#id_email_name");
         inputEmail.value = crrtEmail;
         addToLocalStorage(inputEmail);

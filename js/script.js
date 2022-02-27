@@ -331,12 +331,10 @@ function cardCount(seedCount) {
 
         if(seedCount){
                 countCards = seedCount;
-                console.log(countCards);
         }else{
                 countCards = document.querySelector("#id_select").value;
         }
 
-        console.log(countCards);
         document.querySelector("#id_indicate").innerHTML =
           '<div class="me-3 me-md-0 col-8  col-md-6 pe-md-2"><label for="">Indicate here the desired customization</label><input id="id_here_1" type="text" oninput="changecoscom(),addToLocalStorage(this)"></div><div id="id_card_label" class="col-4 col-md-6 ps-md-2"><p class="mb-0">IBAN UK</p><label for="id_uk-1"><input id="id_uk-1" class="class_uk" type="radio" name="flag" onclick="ibanSummary(this)" onchange="getByName(this)"><span class="uk_span pointer"></span></label><label for="id_french-1"><input id="id_french-1" class="class_fr" type="radio" name="flag" onclick="ibanSummary(this)" onchange="getByName(this)"><span class="french_span pointer"></span></label></div>';
       
